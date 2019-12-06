@@ -44,12 +44,13 @@ h3 {
   position: relative;
   border-radius: 10px;
   box-shadow: -1px 1px 9px -1px rgba(136, 136, 136, 0.397);
-  margin: 25px 15px;
+  margin: 0 15px;
 }
 
 #card--one {
   border-top: 5px solid hsl(180, 62%, 55%);
   align-self: center;
+  margin-bottom: -300px;
 }
 
 #card--two {
@@ -57,9 +58,11 @@ h3 {
 }
 #card--three {
   border-top: 5px solid hsl(34, 97%, 64%);
+  margin-top: -30px;
 }
 #card--four {
   align-self: center;
+  margin-bottom: -300px;
   border-top: 5px solid hsl(212, 86%, 64%);
 }
 .card__img {
@@ -70,7 +73,46 @@ h3 {
 
 section {
   display: flex;
-  margin: 15px auto;
-  max-width: 1300px;
+  margin: 25px auto;
+  max-width: 1250px;
   justify-content: center;
+  height: 630px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1185px) {
+  #card--one {
+    margin-bottom: 0;
+  }
+
+  #card--three {
+    margin-top: -30px;
+  }
+  #card--four {
+    margin-bottom: 0;
+    margin-top: -30px;
+    order: 2;
+  }
+}
+
+
+@media only screen and (max-width: 815px) {
+  section {
+    height: auto;
+  }
+  #card--one {
+    margin-bottom: 25px;
+  }
+  #card--two {
+    margin-bottom: 25px;
+  }
+  #card--three {
+    margin-bottom: 25px;
+    margin-top: 0;
+  }
+  #card--four {
+    order: 2;
+    margin-top: 0;
+  }
 }
